@@ -21,3 +21,4 @@ vim.o.statusline = "%#Pmenu#%t %r %m %=%y"
 
 require "plugins.lazy"
 require "chadminimal.commands"
+require "chadminimal.mappings"

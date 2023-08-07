@@ -2,7 +2,15 @@ local lspconfig = require("lspconfig")
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = false
 
-local servers = { "tsserver", "pyright", "eslint", "pylsp", "rust_analyzer" }
+local servers = {
+        "tsserver",
+        "pyright",
+        "eslint",
+        "pylsp",
+        "rust_analyzer",
+        "lua_ls",
+        "clangd"
+    }
 
 for _, server in ipairs(servers) do
     lspconfig[server].setup {

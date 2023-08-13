@@ -18,7 +18,7 @@ vim.o.scrolloff = 8
 vim.o.completeopt = "menuone"
 vim.o.foldlevel = 99
 vim.o.foldmethod = "indent"
-vim.o.statusline = "%#Visual#%t %r %m %=%y"
+vim.o.statusline = "%#Visual#%f %r %m %=%y [Ln: %l Col: %c]"
 
 require "plugins.lazy"
 require "chadminimal.commands"

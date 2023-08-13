@@ -1,6 +1,4 @@
 local lspconfig = require("lspconfig")
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = false
 
 local servers = {
         "tsserver",
@@ -13,16 +11,13 @@ local servers = {
     }
 
 for _, server in ipairs(servers) do
-    lspconfig[server].setup {
-        capabilities = capabilities
-    }
+    lspconfig[server].setup {}
 end
 
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '[g', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']g', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
-vim.keymap.set('n', '<leader>fe', vim.cmd.EslintFixAll)
 
 vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('UserLspConfig', {}),

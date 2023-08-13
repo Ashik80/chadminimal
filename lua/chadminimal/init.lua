@@ -15,9 +15,10 @@ vim.o.wrap = false
 vim.o.guicursor = ""
 vim.o.colorcolumn = "80"
 vim.o.scrolloff = 8
+vim.o.completeopt = "menuone"
 vim.o.foldlevel = 99
 vim.o.foldmethod = "indent"
-vim.o.statusline = "%#Pmenu#%t %r %m %=%y"
+vim.o.statusline = "%#Visual#%t %r %m %=%y"
 
 require "plugins.lazy"
 require "chadminimal.commands"

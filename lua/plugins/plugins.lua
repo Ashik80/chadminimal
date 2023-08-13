@@ -6,15 +6,6 @@ return {
         end
     },
     {
-        'hrsh7th/nvim-cmp',
-        dependencies = {
-            'hrsh7th/cmp-nvim-lsp'
-        },
-        config = function()
-            require "plugins.cmp"
-        end
-    },
-    {
         'metalelf0/jellybeans-nvim',
         lazy = false,
         dependencies = {

@@ -20,6 +20,8 @@ vim.o.foldlevel = 99
 vim.o.foldmethod = "indent"
 vim.o.statusline = "%#Visual#%f %r %m %=%y [Ln: %l Col: %c]"
 
-require "plugins.lazy"
+vim.cmd('colorscheme jellybeans')
+
 require "chadminimal.commands"
 require "chadminimal.mappings"
+require "chadminimal.lsp"

@@ -1,0 +1,10 @@
+vim.keymap.set('n', '<leader>html', ':-1read $HOME/.config/nvim/snippets/skeleton.html<CR>8j$a')
+
+vim.keymap.set('n', '<leader>div', ':norm a<div></div>F<')
+vim.keymap.set('n', '<leader>p', ':norm a<p></p>F<')
+vim.keymap.set('n', '<leader>span', ':norm a<span></span>F<')
+vim.keymap.set('n', '<leader>dia', ':norm a<dialogue></dialogue>F<')
+vim.keymap.set('n', '<leader>ah', ':norm a<a href=""></a>F<')
+vim.keymap.set('n', '<leader>button', ':norm a<button type=""></button>F<')
+vim.keymap.set('n', '<leader>h1', ':norm a<h1></h1>F<')
+vim.keymap.set('n', '<leader>img', ':norm a<img src="" alt="">3F"')

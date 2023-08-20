@@ -1,6 +1,0 @@
-{
-  "jellybeans-nvim": { "branch": "main", "commit": "f77b75443adf6461ded30de0243f49771f933d06" },
-  "lazy.nvim": { "branch": "main", "commit": "dac844ed617dda4f9ec85eb88e9629ad2add5e05" },
-  "lush.nvim": { "branch": "main", "commit": "a8f0f7b9f837887f13a61d67b40ae26188fe4d62" },
-  "nvim-lspconfig": { "branch": "master", "commit": "a981d4447b92c54a4d464eb1a76b799bc3f9a771" }
-}

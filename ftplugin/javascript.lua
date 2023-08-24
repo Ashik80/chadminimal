@@ -16,37 +16,41 @@ vim.keymap.set('n', '<leader>sta', ':norm aconst [] = useState();F]')
 vim.keymap.set('n', '<leader>red', ':norm aconst [state, dispatch] = useReducer();F)')
 vim.keymap.set('n', '<leader>ctx', ':norm aconst {} = useContext();F)')
 
-vim.lsp.start({
-    name = 'tsserver',
-    cmd = {'typescript-language-server', '--stdio'},
-    root_dir = vim.fs.dirname(vim.fs.find({
-        "package.json",
-        "tsconfig.json",
-        "jsconfig.json",
-        ".git"
-    }, { upward = true })[1]),
-    single_file_support = true
-})
+if vim.fn.executable('typescript-language-server') == 1 then
+    vim.lsp.start({
+        name = 'tsserver',
+        cmd = {'typescript-language-server', '--stdio'},
+        root_dir = vim.fs.dirname(vim.fs.find({
+            "package.json",
+            "tsconfig.json",
+            "jsconfig.json",
+            ".git"
+        }, { upward = true })[1]),
+        single_file_support = true
+    })
+end
 
-vim.lsp.start({
-    name = 'eslint',
-    cmd = {'vscode-eslint-language-server', '--stdio'},
-    root_dir = vim.fs.dirname(vim.fs.find({
-        '.eslintrc',
-        '.eslintrc.js',
-        '.eslintrc.json',
-        'eslint.config.js'
-    }, { upward = true })[1]),
-    settings = {
-        validate = 'on',
-        experimental = {
-            useFlatConfig = false,
+if vim.fn.executable('vscode-eslint-language-server') == 1 then
+    vim.lsp.start({
+        name = 'eslint',
+        cmd = {'vscode-eslint-language-server', '--stdio'},
+        root_dir = vim.fs.dirname(vim.fs.find({
+            '.eslintrc',
+            '.eslintrc.js',
+            '.eslintrc.json',
+            'eslint.config.js'
+        }, { upward = true })[1]),
+        settings = {
+            validate = 'on',
+            experimental = {
+                useFlatConfig = false,
+            },
+            rulesCustomizations = {},
+            run = 'onType',
+            problems = {
+                shortenToSingleLine = false,
+            },
+            nodePath = '',
         },
-        rulesCustomizations = {},
-        run = 'onType',
-        problems = {
-            shortenToSingleLine = false,
-        },
-        nodePath = '',
-    },
-})
+    })
+end

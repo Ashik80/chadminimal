@@ -28,30 +28,34 @@ vim.api.nvim_create_autocmd({'BufEnter'}, {
 vim.keymap.set('n', '<leader>b', ':BuildCurrentFile<CR>')
 vim.keymap.set('n', '<leader>cc', ':call v:lua.ToggleCompiler()<CR>')
 
-vim.lsp.start({
-    name = 'pylsp',
-    cmd = {'pylsp'},
-    single_file_support = true
-})
+if vim.fn.executable('pylsp') == 1 then
+    vim.lsp.start({
+        name = 'pylsp',
+        cmd = {'pylsp'},
+        single_file_support = true
+    })
+end
 
-vim.lsp.start({
-    name = 'pyright',
-    cmd = {'pyright-langserver', '--stdio'},
-    filetypes = {'python'},
-    root_dir = vim.fs.dirname(vim.fs.find({
-        'setup.py',
-        'pyproject.toml',
-        'requirements.txt',
-        'pyrightconfig.json'
-    }, { upward = true })[1]),
-    settings = {
-        python = {
-            analysis = {
-                autoSearchPaths = true,
-                diagnosticMode = "workspace",
-                useLibraryCodeForTypes = true
+if vim.fn.executable('pyright-langserver') == 1 then
+    vim.lsp.start({
+        name = 'pyright',
+        cmd = {'pyright-langserver', '--stdio'},
+        filetypes = {'python'},
+        root_dir = vim.fs.dirname(vim.fs.find({
+            'setup.py',
+            'pyproject.toml',
+            'requirements.txt',
+            'pyrightconfig.json'
+        }, { upward = true })[1]),
+        settings = {
+            python = {
+                analysis = {
+                    autoSearchPaths = true,
+                    diagnosticMode = "workspace",
+                    useLibraryCodeForTypes = true
+                }
             }
-        }
-    },
-    single_file_support = true
-})
+        },
+        single_file_support = true
+    })
+end

@@ -6,6 +6,7 @@ vim.keymap.set('n', '<leader>yf', ':let @f = expand("%:.")<CR>')
 -- terminal
 vim.keymap.set('n', '<leader>t', ':bel sp | term<CR>')
 vim.keymap.set('n', '<leader>vt', ':bel vsp | term<CR>')
+vim.keymap.set('t', '<leader><leader>', '<C-\\><C-n>')
 
 -- navigation
 vim.keymap.set('n', '<leader>n', ':Ex<CR>')

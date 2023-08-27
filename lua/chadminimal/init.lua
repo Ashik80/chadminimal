@@ -20,9 +20,9 @@ vim.o.foldlevel = 99
 vim.o.foldmethod = "indent"
 vim.cmd('set wildcharm=<tab>')
 vim.o.statusline = "%#Visual#%f %r %m %=%y [Ln: %l Col: %c]"
-
 vim.cmd('colorscheme jellybeans')
 
+require "chadminimal.highlights"
 require "chadminimal.commands"
 require "chadminimal.mappings"
 require "chadminimal.lsp"

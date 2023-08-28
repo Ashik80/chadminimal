@@ -10,10 +10,10 @@ vim.keymap.set('t', '<leader><leader>', '<C-\\><C-n>')
 
 -- navigation
 vim.keymap.set('n', '<leader>n', ':Ex<CR>')
-vim.keymap.set('n', '<leader>fa', ':find ')
-vim.keymap.set('n', '<leader>ff', ':FindFile ')
+vim.keymap.set('n', '<leader>fa', ':find<space>')
+vim.keymap.set('n', '<leader>ff', ':FindFile<space>')
 vim.keymap.set('n', '<leader>fb', ':b <tab>')
-vim.keymap.set('n', '<leader>fg', ':GREP ')
+vim.keymap.set('n', '<leader>fg', ':RGREP<space>')
 vim.keymap.set('n', '<leader>ql', ':cclose<CR>')
 vim.keymap.set('n', '<leader>qn', ':cnext<CR>')
 vim.keymap.set('n', '<leader>qp', ':cprev<CR>')

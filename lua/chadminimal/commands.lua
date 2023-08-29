@@ -24,7 +24,7 @@ end
 
 vim.api.nvim_create_user_command(
 'GREP',
-"execute 'silent grep! -i -R <args> --exclude-dir=node_modules --exclude-dir=.git .' | copen",
+"execute 'silent grep! -i -R <args> --exclude-dir=node_modules --exclude-dir=.git .' | cw",
 { nargs = 1 })
 
 vim.api.nvim_create_user_command(
@@ -39,5 +39,5 @@ vim.api.nvim_create_user_command(
 
 vim.api.nvim_create_user_command(
 'BuildCurrentFile',
-"silent execute 'make %' | copen",
+"silent execute 'make %' | cw",
 {})

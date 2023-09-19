@@ -6,13 +6,22 @@ return {
         end
     },
     {
-        'metalelf0/jellybeans-nvim',
-        lazy = false,
+        'hrsh7th/nvim-cmp',
         dependencies = {
-            'rktjmp/lush.nvim'
+            'hrsh7th/cmp-nvim-lsp'
         },
         config = function()
-            vim.cmd.colorscheme "jellybeans-nvim"
+            require "plugins.cmp"
         end
     },
+    -- {
+    --     'metalelf0/jellybeans-nvim',
+    --     lazy = false,
+    --     dependencies = {
+    --         'rktjmp/lush.nvim'
+    --     },
+    --     config = function()
+    --         vim.cmd.colorscheme "jellybeans-nvim"
+    --     end
+    -- },
 }

@@ -1,8 +1,9 @@
-vim.g.mapleader = ","
+vim.g.mapleader = " "
 
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.wildignore = "**/node_modules/**,**/.git/**,**/__pycache__/**"
+vim.o.ttimeoutlen = 0
 vim.o.path = ".,**"
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
@@ -19,7 +20,9 @@ vim.o.completeopt = "menuone"
 vim.o.foldlevel = 99
 vim.o.foldmethod = "indent"
 vim.o.statusline = "%#Visual#%f %r %m %=%y [Ln: %l Col: %c]"
+vim.cmd('colorscheme gruvbox')
 
 require "plugins.lazy"
 require "chadminimal.commands"
 require "chadminimal.mappings"
+require "chadminimal.highlights"

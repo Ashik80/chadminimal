@@ -20,7 +20,6 @@ vim.o.completeopt = "menuone"
 vim.o.foldlevel = 99
 vim.o.foldmethod = "indent"
 vim.o.statusline = "%#Visual#%f %r %m %=%y [Ln: %l Col: %c]"
-vim.cmd('colorscheme gruvbox')
 
 require "plugins.lazy"
 require "chadminimal.commands"

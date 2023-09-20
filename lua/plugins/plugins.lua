@@ -14,14 +14,20 @@ return {
             require "plugins.cmp"
         end
     },
+    {
+        'rose-pine/neovim', name = 'rose-pine',
+        config = function()
+            vim.cmd.colorscheme "rose-pine"
+        end
+    },
     -- {
-    --     'metalelf0/jellybeans-nvim',
-    --     lazy = false,
+    --     'junegunn/fzf.vim',
     --     dependencies = {
-    --         'rktjmp/lush.nvim'
-    --     },
-    --     config = function()
-    --         vim.cmd.colorscheme "jellybeans-nvim"
-    --     end
+    --         'junegunn/fzf'
+    --     }
     -- },
+    {
+        'nvim-telescope/telescope.nvim',
+        dependencies = { 'nvim-lua/plenary.nvim' }
+    }
 }

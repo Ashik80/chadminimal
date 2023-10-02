@@ -3,6 +3,10 @@ vim.keymap.set({'n', 'v'}, '<leader>y', '"+y')
 vim.keymap.set({'n', 'v'}, '<leader>cp', '"+p')
 vim.keymap.set('n', '<leader>yf', ':let @f = expand("%:.")<CR>')
 
+-- indentation
+vim.keymap.set('v', '>', '>gv')
+vim.keymap.set('v', '<', '<gv')
+
 -- terminal
 vim.keymap.set('n', '<leader>t', ':bel sp | term<CR>')
 vim.keymap.set('n', '<leader>vt', ':bel vsp | term<CR>')

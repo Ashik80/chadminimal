@@ -15,17 +15,11 @@ return {
         end
     },
     {
-        'rose-pine/neovim', name = 'rose-pine',
+        "catppuccin/nvim", name = "catppuccin", priority = 1000,
         config = function()
-            vim.cmd.colorscheme "rose-pine"
+            vim.cmd.colorscheme "catppuccin"
         end
     },
-    -- {
-    --     'junegunn/fzf.vim',
-    --     dependencies = {
-    --         'junegunn/fzf'
-    --     }
-    -- },
     {
         'nvim-telescope/telescope.nvim',
         dependencies = { 'nvim-lua/plenary.nvim' }
